@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+ Features Implemented
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Add Tasks: Input field + button (or Enter key) to add tasks
+.
 
-## Available Scripts
+Edit Tasks: Inline edit using prompt() (replaceable with modal/inline forms)
+.
 
-In the project directory, you can run:
+Delete Tasks: Remove tasks with confirmation dialogs
+.
 
-### `npm start`
+Mark Complete: Checkbox toggles between Pending and Completed
+.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Filters: Buttons to show All, Completed, or Pending tasks
+.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Search: Filter tasks by title with search bar + Enter key support
+.
 
-### `npm test`
+Persistence: Custom hook useLocalStorage keeps tasks saved after refresh
+.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dark/Light Mode: Toggle button in Header switches between themes
+.
 
-### `npm run build`
+Responsive UI: Layout adapts for desktop and mobile (.contenair, .taskManager).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Accessibility: Labeled inputs, proper roles for buttons and forms.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ Decisions Made
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Component Structure:
 
-### `npm run eject`
+App.js manages state and orchestrates components
+.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Header handles theme toggle
+.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+TaskTable, TaskRow, and TableHeader separate task display concerns
+.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Search handles both status filtering and text search
+.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+useLocalStorage custom hook centralizes persistence logic
+.
 
-## Learn More
+Styling Choice:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Used plain CSS (style.css) for simplicity and responsiveness.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Classes like .task-table, .strike, .add-button maintain a consistent style.
 
-### Code Splitting
+Editing Approach:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Chose window.prompt() for quick inline editing (simple but blocking).
 
-### Analyzing the Bundle Size
+Can be improved with inline inputs or modal dialogs for better UX.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+State Management:
 
-### Making a Progressive Web App
+Used React’s built-in useState and useEffect with localStorage.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ This project demonstrates React fundamentals: hooks, state, controlled components, side effects, and component composition — while also practicing persistence and theming.
