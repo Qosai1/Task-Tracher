@@ -209,3 +209,26 @@ input[type="text"] {
     display: flex;
     gap: 10px;
 }
+.sort{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.sort button{
+    background-color: #008CBA; 
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.dark-mode .sort{
+     background-color: #1e1e1e;
+}
