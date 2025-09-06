@@ -1,3 +1,23 @@
+
+ React Task Manager
+ Project Setup
+
+Clone the repository and navigate to the project folder.
+
+git clone <repo-url>
+cd react-task-manager
+
+
+Install dependencies:
+
+npm install
+
+
+Start the development server:
+
+npm start
+
+
  Features Implemented
 
 Add Tasks: Input field + button (or Enter key) to add tasks
