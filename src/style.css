@@ -1,0 +1,211 @@
+
+*{
+    box-sizing: border-box;
+}
+.taskManager{
+    display: flex;
+    flex: 1 1 200px;
+   flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 90%;
+    margin: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tasks{
+    flex: 1 1 200px;
+   border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+
+}
+.contenair{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.task-table{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 90%;
+    margin-top: 10px;
+   
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+.table-header {
+    background-color: #3484b2;
+}
+.edit-button{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.delete-button{
+    background-color: #f44336; 
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.delete-button:hover{
+    background-color: #da190b;
+}
+.add-button:hover{
+    background-color: #007bb5;
+}
+.edit-button:hover{
+    background-color: #45a049;
+}
+.add-button{
+    background-color: #008CBA; 
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    font-size: 14px;
+    margin: 5px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.strike {
+  text-decoration: line-through;         
+  text-decoration-thickness: 2px;          
+  text-decoration-color: #000000;           
+  
+}
+input[type="text"] {
+    width: 200px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    font-size: 14px;
+    background-color: #3484b2;
+    color: white;
+}
+.modeButton{
+    margin-left: auto;
+    background-color: #f0f0f0; 
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.modeButton:hover{
+    background-color: #d4d4d4;
+}
+.dark-mode{
+    background-color: #121212;
+    color: white;
+
+}
+.dark-mode .contenair{
+    background-color: #1e1e1e;
+}
+.dark-mode .header{
+     background-color: #1e1e1e;
+     
+}
+.dark-mode .taskManager{
+    background-color: #363d50;
+}
+.dark-mode .modeButton{
+    background-color: #363d50;
+    color: white;
+}
+.dark-mode .search{
+    background-color: #1e1e1e;
+}
+.dark-mode .tasks{
+    background-color: #1e1e1e;
+}
+.dark-mode .add-button{
+    background-color: #4d566d; 
+   
+}
+.dark-mode .table-header{
+      background-color: #363d50; 
+}
+.dark-mode .delete-button{
+    background-color: #8596cd;
+}
+.dark-mode .edit-button{
+    background-color: #8596cd;
+}
+.status-buttons{
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+.status-buttons button{
+    background-color: #008CBA; 
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.status-buttons button:hover{
+    background-color: #007bb5;
+}
+
+.dark-mode .status-buttons button{
+    background-color: #8596cd;
+}
+.action-buttons{
+    display: flex;
+    gap: 10px;
+}
