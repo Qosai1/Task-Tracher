@@ -1,11 +1,12 @@
 
 import './App.css';
 import './style.css';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import TaskTable from './components/TaskTable';
 import Search from './components/Search';
 import Header from './components/Header'; 
 import UseLocalStorage from './components/useLocalStorage';
+import Sort from './components/SortByAlphabetically';
 
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
               }}
             />
             <button className='add-button' onClick={addTask}>Add</button>
+            
             </div>
             <TaskTable
               tasks={filteredTasks}
@@ -81,12 +83,18 @@ function App() {
               onDelete={handleDelete}
               setTasks={setTasks}
               onToggle={toggleStatus}
+              onSearch={setFilteredTasks}
             />
           </div>
           <div className='search'>
             <Search
               tasks={tasks}
               onSearch={setFilteredTasks} 
+            />
+          </div>
+          <div className='sort'>
+            <Sort
+             onSearch={setFilteredTasks} 
             />
           </div>
         </div>

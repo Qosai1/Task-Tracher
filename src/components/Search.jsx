@@ -24,8 +24,6 @@ export default function Search({ tasks, onSearch }) {
       onSearch(result);
     }
   }
-
-
   return (
     <div>
       <h1>Search && Filter</h1>
@@ -34,6 +32,7 @@ export default function Search({ tasks, onSearch }) {
       <button value={'All'} onClick={handleStatusChange}>All</button>
       <button value={'Completed'} onClick={handleStatusChange}>Completed</button>
       <button value={'Pending'} onClick={handleStatusChange}>Pending</button>
+
     </div>
     <h3>Search by Title</h3>
       <input
